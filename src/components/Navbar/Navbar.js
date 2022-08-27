@@ -9,10 +9,7 @@ return (
  <nav className='navbar'>
     <div className='container'>
         <h3 className='logo'>Logo</h3>
-        <ul 
-        className={menuIcon ? 'nav-link-mobile' : 'nav-links'} 
-        onClick={()=>setMenuIcon(false)}
-        >
+        <ul className="nav-links" >
             <Link to="/"><li>Home</li></Link>
             <Link to="/about"><li>About</li></Link>
             <Link to="/Service"><li>Destinations</li></Link>
@@ -21,10 +18,19 @@ return (
             <Link to=""><li>Contact Us</li></Link>
         </ul>
         <button 
-         className='mobile-menu-icon hidden'
-         onClick={()=>setMenuIcon(!menuIcon)}
-         >{menuIcon === false ?  <FiMenu/> : <ImCross/>}</button>
+            className='mobile-menu-icon hidden'
+            onClick={()=>setMenuIcon(!menuIcon)}
+         >{menuIcon === false ?  <FiMenu/> : <ImCross/>}
+         </button>
     </div>
+    <ul className={menuIcon === true ? `nav-link-mobile` : 'hidden'} >
+            <Link to="/"><li>Home</li></Link>
+            <Link to="/about"><li>About</li></Link>
+            <Link to="/Service"><li>Destinations</li></Link>
+            <Link to="/Service"><li>Tour package</li></Link>
+            <Link to="/Service"><li>Gallery</li></Link>
+            <Link to=""><li>Contact Us</li></Link>
+    </ul>
  </nav>
   )
 }
