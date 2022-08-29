@@ -23,7 +23,7 @@ return (
          >{menuIcon === false ?  <FiMenu/> : <ImCross/>}
          </button>
     </div>
-    <ul className={menuIcon === true ? `nav-link-mobile` : 'hidden'} >
+    <ul className={menuIcon === true ? `nav-link-mobile z-50` : 'hidden'} >
             <Link to="/"><li>Home</li></Link>
             <Link to="/about"><li>About</li></Link>
             <Link to="/Service"><li>Destinations</li></Link>
