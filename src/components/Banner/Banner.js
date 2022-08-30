@@ -12,7 +12,7 @@ import travel04 from '../../assets/images/travel-banner-04.jpg'
 import travel05 from '../../assets/images/travel-banner-05.jpg'
 import travel06 from '../../assets/images/travel-banner-06.jpg'
 import travel08 from '../../assets/images/travel-banner-08.jpg'
-import Search from '../Search';
+import Search from '../Search/Search';
 import DateComponent from '../Date/DateComponent';
 
 const Banner = () => {

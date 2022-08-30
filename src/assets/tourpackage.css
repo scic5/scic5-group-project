@@ -1,0 +1,14 @@
+@media (max-width:1214px){
+    .tour-price-day{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        font-size: 1.2vw;
+    }
+    .tour-place{
+        font-size: 1.2vw;
+    }
+    .tour-rating{
+        font-size: 1.2vw;
+    }
+}
