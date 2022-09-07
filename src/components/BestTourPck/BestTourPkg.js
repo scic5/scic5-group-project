@@ -1,7 +1,7 @@
 import React from 'react'
 import {data} from '../../assets/data.js'
 import '../../assets/tourpackage.css'
-data.map((d)=>console.log(d))
+
 const BestTourPkg = () => {
   return (
     <div className='pt-32'>
@@ -9,7 +9,7 @@ const BestTourPkg = () => {
       <div className='grid grid-cols-4 gap-4 px-10 tour-package'>
         {
             data.map((item)=>
-                <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                <div key={item.id} class="max-w-sm rounded overflow-hidden shadow-lg">
                 <div className='w-full'><img class="w-full" src={item.image} alt={item.image}/></div>
                 <div class="px-3 pt-6 flex flex-row justify-between tour-price-day">
                     <p class="font-bold text-md">{item.price}</p>

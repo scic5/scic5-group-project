@@ -18,7 +18,7 @@ const Search = () => {
                 <option value="groupTours">Group Tours</option>
               </select>
       </div>
-      <div>
+      <div className="dateView">
         <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
       </div>
       <div><button className='bg-orange-600' type='submit'>Find Now</button></div>
