@@ -6,6 +6,7 @@ import DateComponent from './components/Date/DateComponent';
 import BestTourPkg from './components/BestTourPck/BestTourPkg';
 import TravelWithUs from './components/WhyTravelWithUs/TravelWithUs';
 import Reviews from './components/Reviews/Reviews';
+import RecentMostVisited from './components/RecentMostVisitedDestination/RecentMostVisited';
 function App() {
   
   return (
@@ -15,6 +16,7 @@ function App() {
       <BestTourPkg />
       <TravelWithUs />
       <Reviews />
+      <RecentMostVisited />
     </div>
   );
 }

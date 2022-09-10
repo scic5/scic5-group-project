@@ -2,7 +2,7 @@ import React from 'react'
 import '../../assets/whytravel.css'
 import {travel} from '../../assets/data.js'
 const TravelWithUs = () => {
-   travel.map(t=>console.log(t.image))
+   
   return (
     <div className='pt-24 pb-16'>
         <p className='pb-16 text-center text-2xl'>Why you make tour with us</p>
