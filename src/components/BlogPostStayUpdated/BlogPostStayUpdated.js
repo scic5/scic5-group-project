@@ -1,58 +1,72 @@
 import React from 'react'
-import eiffel from '../../assets/blogpostupdate/eiffel-tower-g6eb68898a_640.jpg'
-import indiaPlace from '../../assets/blogpostupdate/india-places-to-visit.jpg'
-import wp from '../../assets/blogpostupdate/wp8738941.jpg'
+import {Swiper,SwiperSlide} from 'swiper/react'
 import '../../assets/blogpost.css'
+import {blogPostStayUpdate} from '../../assets/data'
+
+//Import Swiper styles
+import "swiper/css";
+import 'swiper/css/pagination';
+import 'swiper/css/navigation'
+
+import {Pagination, Navigation} from "swiper"
 const BlogPostStayUpdated = () => {
   return (
     <div>
       <p className='text-center text-lg text-rose-300'>Latest Blog</p>
-      <p className='text-center text-3xl text-gray-500 pb-5'>Stay Updated and See Blog</p>
+      <p className='text-center text-3xl text-gray-500 pb-16'>Stay Updated and See Blog</p>
       <div className='px-5 flex flex-col md:flex-col lg:flex-row place-items-center justify-center gap-x-4 gap-y-4'>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg card-zoom">
-            <img className="card-zoom-image w-full" src={eiffel} alt={eiffel}/>
-            <div class="px-6 py-4 flex flex-row justify-between px-3">
-                <div class="font-bold text-xl mb-2">Person</div>
-                <div class="font-bold text-xl mb-2">Comment</div>
+        <Swiper
+            // slidesPerView={2}
+            // spaceBetween={30}
+            slidesPerGroup={1}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            pagination={{clickable: true,}}
+            navigation={true}
+            breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                  width:640
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 40,
+                  width:768
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 50,
+                  width:1024
+                },
+                1200: {
+                  slidesPerView: 4,
+                  spaceBetween: 50,
+                  width:1200
+                },
                 
-            </div>
-            <div class="px-6 pt-4 pb-2">
-             <p className='text-2xl text-gray-400'>Donec Egestas Orci Viverra Fermentum Risus.</p>
-            </div>
-            <div>
-                <button className='m-6 rounded-md p-1' style={{border:'1px solid red'}}>Read more</button>
-            </div>
-        </div>
-
-        <div class="max-w-sm rounded overflow-hidden shadow-lg card-zoom">
-            <img class="w-full card-zoom-image" src={indiaPlace} alt={indiaPlace}/>
-            <div class="px-6 py-4 flex flex-row justify-between px-3">
-                <div class="font-bold text-xl mb-2">Person</div>
-                <div class="font-bold text-xl mb-2">Comment</div>
-                
-            </div>
-            <div class="px-6 pt-4 pb-2">
-             <p className='text-2xl text-gray-400'>Donec Egestas Orci Viverra Fermentum Risus.</p>
-            </div>
-            <div>
-                <button className='m-6 rounded-md p-1' style={{border:'1px solid red'}}>Read more</button>
-            </div>
-        </div>
-
-        <div class="max-w-sm rounded overflow-hidden shadow-lg card-zoom">
-            <img class="w-full card-zoom-image" src={wp} alt={wp}/>
-            <div class="px-6 py-4 flex flex-row justify-between px-3">
-                <div class="font-bold text-xl mb-2">Person</div>
-                <div class="font-bold text-xl mb-2">Comment</div>
-                
-            </div>
-            <div class="px-6 pt-4 pb-2">
-             <p className='text-2xl text-gray-400'>Donec Egestas Orci Viverra Fermentum Risus.</p>
-            </div>
-            <div>
-                <button className='m-6 rounded-md p-1' style={{border:'1px solid red'}}>Read more</button>
-            </div>
-        </div>
+              }}
+            modules={[Pagination, Navigation]}
+            className="mySwiper swiper-container"
+        >
+            {blogPostStayUpdate.map((blogPost)=>
+            <SwiperSlide>
+                    <div class="maxWidthSm rounded overflow-hidden shadow-lg mb-10">
+                        <div className='card-zoom'><img className="card-zoom-image w-full" src={blogPost.image} alt={blogPost.image}/></div>
+                        <div class="py-2 flex flex-row justify-between px-1">
+                            <div class="font-bold text-gray-400 text-md mb-2">{blogPost.person}</div>
+                            <div class="font-bold text-md mb-2">{`(${blogPost.comment.length})Comment`}</div>
+                        </div>
+                        <div class="px-2 pt-1 pb-2">
+                            <p className='text-lg text-gray-400'>{blogPost.title}</p>
+                        </div>
+                        <div className=''>
+                            <button className='btn button m-3 rounded-md  text' style={{border:'1px solid blanchedalmond'}}>Read more</button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            )}
+        </Swiper>
       </div>
     </div>
   )

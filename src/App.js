@@ -8,6 +8,8 @@ import TravelWithUs from './components/WhyTravelWithUs/TravelWithUs';
 import Reviews from './components/Reviews/Reviews';
 import RecentMostVisited from './components/RecentMostVisitedDestination/RecentMostVisited';
 import BlogPostStayUpdated from './components/BlogPostStayUpdated/BlogPostStayUpdated';
+import Gallery from './components/Gallery/Gallery';
+import Footer from './components/Footer/Footer';
 function App() {
   
   return (
@@ -19,6 +21,8 @@ function App() {
       <Reviews />
       <RecentMostVisited />
       <BlogPostStayUpdated />
+      <Gallery />
+      <Footer />
     </div>
   );
 }

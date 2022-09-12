@@ -12,3 +12,130 @@
   .card-zoom:hover .card-zoom-text {
     @apply scale-100;
   }
+  .swiper-container {
+    width: 1400px;
+  }
+  .swiper-button-prev{
+    margin-left: -12px;
+  }
+  .swiper-button-next{
+
+    margin-right: -13px;
+   
+  }
+  .swiper-pagination{
+   
+  }
+
+  /* button hover effect */
+  .outer{
+   
+  }
+  
+  .wrapper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btn{
+    display: block;
+    font-size: 24px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 2px;
+    letter-spacing: 2px;
+    transition: all .25s;
+  }
+  
+  .btn:hover{
+    letter-spacing: 5px;
+    width: 200px;
+  }
+  .button {
+    border-radius: 3px;
+    display: block;
+    width: 120px;
+    background: linear-gradient(to right, rgb(240, 130, 130) 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+  }
+  .button:hover {
+    background-position: left bottom;
+  }
+  .text {
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px; 
+    color: black;
+    transition: all .6s ease-out;
+    display: block;
+  }
+  .text:hover {
+    color: white;  
+  }
+ 
+  
+  
+ /* slider center position */
+  .swiper-slide {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+
+  @media screen and (min-width: 500px) {
+    .swiper-container {
+      width: 500px;
+      
+    }
+    /* .maxWidthSm{
+      width: 80%;
+    } */
+    .swiper-slide .maxWidthSm{
+      margin: auto;
+    }
+  }
+  @media screen and (min-width: 640px) {
+    .swiper-container {
+      width: 640px;
+      
+    }
+    /* .maxWidthSm{
+      width: 80%;
+    } */
+  }
+  
+  @media screen and (min-width: 768px) {
+    .swiper-container {
+      width: 768px;
+      
+    }
+    /* .maxWidthSm{
+      max-width: 24rem;
+    } */
+  }
+
+  @media screen and (min-width: 1024px) {
+    .swiper-container {
+      width: 1024px;
+    
+    }
+    /* .maxWidthSm{
+      max-width: 24rem;
+    } */
+  }
+
+  @media screen and (min-width: 1200px) {
+    .swiper-container {
+      width: 1200px;
+    
+    }
+    /* .maxWidthSm{
+      max-width: 24rem;
+    } */
+  }
