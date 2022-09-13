@@ -1,12 +1,18 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import '../../assets/reviews.css'
 import {reviews} from '../../assets/data'
+import {motion} from 'framer-motion'
 const Reviews = () => {
-
+  const scrollRef = useRef(null)
   return (
     <div className='pt-10 pb-16' style={{background:'#F9EAEA'}}>
-        <p className='pb-16 text-center text-2xl'>Reviews which we deserve</p>
-        <div className= ' flex flex-col md:flex-row md:flex-row review gap-x-4 gap-y-4 drop-shadow-xl'>
+        <p  className='pb-16 text-center text-2xl'>Reviews which we deserve</p>
+        <motion.div 
+        className= ' flex flex-col md:flex-row md:flex-row review gap-x-4 gap-y-4 drop-shadow-xl'
+          initial={{opacity:0}}
+          animate={{opacity:1}}
+          transition={{delay:1.5,duration:1.5}}
+        >
            {reviews.map((review)=>
              <div key={review.id} class="max-w-sm rounded  shadow-lg rounded-t-full drop-shadow-xl " style={{boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'}}>
               <img class=" rounded-full" src={review.image} alt={review.image}/>
@@ -24,7 +30,8 @@ const Reviews = () => {
               </div>
             </div>
            )}
-        </div>
+        </motion.div>
+        
     </div>
   )
 }

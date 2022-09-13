@@ -84,6 +84,7 @@ const Footer = () => {
       <div className='bg-rose-200' style={{backgroundColor:'#262339'}}>
         <p className='text-white text-center py-2'>Copyrigth 2022 @Travel endless </p>
       </div>
+      
       <NewsLetter />
     </div>
   )
