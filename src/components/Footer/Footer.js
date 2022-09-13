@@ -11,69 +11,80 @@ import express from '../../assets/logo/expresscard-removebg-preview.png'
 import mastercard from '../../assets/logo/mastercard-removebg-preview.png'
 import visacard from '../../assets/logo/visa-removebg-preview.png'
 import paypal from '../../assets/logo/paypal-removebg-preview.png'
+import NewsLetter from '../NewsLetter/NewsLetter'
 const Footer = () => {
   return (
-    <div className='h-full flex flex-row px-10 gap-x-5 pt-8 text-white' style={{backgroundColor:'#262339'}}>
-      <div className='w-2/5 pb-16'>
-        <div className='mb-5'><img className='w-16 h-16' src={icon} alt={icon}/></div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid maxime aut ut voluptate dolorum nisi ducimus ratione</p>
-        <div>
-            <p className='pt-5 pb-4'>Follow Us</p>
-            <div className='flex flex-row gap-x-4'>
-                <img className='w-10 h-10' src={facebook} alt={facebook} />
-                <img className='w-10 h-10' src={instgram} alt={instgram} />
-                <img className='w-10 h-10' src={linkedIn} alt={linkedIn} />
-                <img className='w-10 h-10' src={twitter} alt={twitter} />
-                
+    <div className='relative pt-36 divide-y grid grid-cols-1'>
+      <div className=' flex flex-col lg:flex-row sm:flex-col md:flex-col px-10 gap-x-5 pt-32 text-white ' style={{backgroundColor:'#262339'}}>
+        <div className='m-auto w-full lg:w-1/3'>
+          <div className='pb-16  m-auto'>
+            <div className='mb-5'><img className='w-16 h-16' src={icon} alt={icon}/></div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid maxime aut ut voluptate dolorum nisi ducimus ratione</p>
+            <div>
+                <p className='pt-5 pb-4'>Follow Us</p>
+                <div className='flex flex-row gap-x-4'>
+                    <img className='w-10 h-10' src={facebook} alt={facebook} />
+                    <img className='w-10 h-10' src={instgram} alt={instgram} />
+                    <img className='w-10 h-10' src={linkedIn} alt={linkedIn} />
+                    <img className='w-10 h-10' src={twitter} alt={twitter} />
+                    
+                </div>
             </div>
+          </div>
         </div>
-      </div>
-      <div className='flex flex-col w-1/5'>
-        <p className='pt-1 mt-1 pb-6'>Contact Us</p>
-        <div className='flex flex-row items-center pb-3'>
-            <img className='w-6 h-6 mr-4' src={contact} alt={contact} />
+        <div className='flex flex-row m-auto w-full lg:w-2/3'>
+          <div className='flex flex-col w-2/6'>
+            <p className=' mt-1 pb-6'>Contact Us</p>
+            <div className='flex flex-row items-center pb-3'>
+                <img className='w-6 h-6 mr-4' src={contact} alt={contact} />
+                <div className='flex flex-col'>
+                    <p>+01852-1265122</p>
+                    <p>+01852-1265122</p>
+                </div>
+            </div>
+            <div className='flex flex-row items-center pb-3'>
+                <img className='w-6 h-6 mr-4' src={letter} alt={letter} />
+                <div className='flex flex-col'>
+                    <p>info@example.com</p>
+                    <p>support@gmail.com</p>
+                </div>
+            </div>
+            <div className='flex flex-row items-center pb-3'>
+                <img className='w-6 h-6 mr-4' src={location} alt={location} />
+                <div className='flex flex-col'>
+                    <p>2752 Willison Street</p>
+                    <p>Eagan, United State</p>
+                </div>
+            </div>
+          </div>
+          <div className='w-2/6'>
+            <p className='mt-1 pb-6'>Support </p>
+            <p className='pb-3' >Contact us</p>
+            <p  className='pb-3'>About us</p>
+            <p  className='pb-3'>Destinations</p>
+            <p  className='pb-3'>Our Blogs</p>
+            <p  className='pb-3'>Package</p>
+          </div>
+          <div className='w-2/6'>
+            <p className='mt-1 pb-6'>We Accepts</p>
             <div className='flex flex-col'>
-                <p>+01852-1265122</p>
-                <p>+01852-1265122</p>
+                <div className='flex flex-row'>
+                    <img className='w-16 h-16'  src={mastercard} alt={mastercard} />
+                    <img className='w-16 h-16' src={visacard} alt={visacard} />
+                  
+                </div>
+                <div className='flex flex-row'>
+                    <img className='w-16 h-16' src={express} alt={express} />
+                    <img className='w-16 h-16' src={paypal} alt={paypal} />
+                </div>
             </div>
-        </div>
-        <div className='flex flex-row items-center pb-3'>
-            <img className='w-6 h-6 mr-4' src={letter} alt={letter} />
-            <div className='flex flex-col'>
-                <p>info@example.com</p>
-                <p>support@gmail.com</p>
-            </div>
-        </div>
-        <div className='flex flex-row items-center pb-3'>
-            <img className='w-6 h-6 mr-4' src={location} alt={location} />
-            <div className='flex flex-col'>
-                <p>2752 Willison Street</p>
-                <p>Eagan, United State</p>
-            </div>
+          </div>
         </div>
       </div>
-      <div className='w-1/5'>
-        <p className='mt-1 pb-6'>Support </p>
-        <p className='pb-3' >Contact us</p>
-        <p  className='pb-3'>About us</p>
-        <p  className='pb-3'>Destinations</p>
-        <p  className='pb-3'>Our Blogs</p>
-        <p  className='pb-3'>Package</p>
+      <div className='bg-rose-200' style={{backgroundColor:'#262339'}}>
+        <p className='text-white text-center py-2'>Copyrigth 2022 @Travel endless </p>
       </div>
-      <div className='w-1/5'>
-        <p className='mt-0 pb-6'>We Accepts</p>
-        <div className='flex flex-col'>
-            <div className='flex flex-row'>
-                <img className='w-16 h-16'  src={mastercard} alt={mastercard} />
-                <img className='w-16 h-16' src={visacard} alt={visacard} />
-              
-            </div>
-            <div className='flex flex-row'>
-                <img className='w-16 h-16' src={express} alt={express} />
-                <img className='w-16 h-16' src={paypal} alt={paypal} />
-            </div>
-        </div>
-      </div>
+      <NewsLetter />
     </div>
   )
 }

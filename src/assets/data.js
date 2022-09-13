@@ -203,40 +203,6 @@ export const blogPostStayUpdate=[
     }
 ]
 
-export const gallery=[
-    {
-        india:[
-            '../gallery/india/133822.jpg',
-            '../gallery/india/37457785730ead3a2f40bd41b4da15a2.jpg',
-            '../gallery/india/ce75ce616c2c92d8b4b5ac8ccbea656d--south-india-in-india.jpg',
-            '../gallery/india/hills-2836301__480.jpg',
-            '../gallery/india/india-in-pictures-beautiful-places-to-photograph-gateway-of-india-mumbai.jpg',
-            '../gallery/india/taj-mahal-sunset-agra-india-260nw-1067263634.jpg',
-            '../gallery/india/Tulip-Garden-in-full-Bloom.jpg'
-        ]
-    },
-    {
-        spain:[
-            
-            '../gallery/spain/spain-top-attractions-barcelonas-sagrada-familie-and-gaudi-sites.jpg',
-            '../gallery/spain/photo-1539037116277-4db20889f2d4.jpg',
-            '../gallery/spain/HD-wallpaper-barcelona-spain-cities-buildings-travel-spain-barcelona-city.jpg',
-            '../gallery/spain/barcelona-spain.jpg',
-            '../gallery/spain/3259029.jpg',
-            '../gallery/spain/3157246.jpg',
-        ]
-    },
-    {
-        italy:[
-            
-            '../gallery/italy/Vatican-City.jpg',
-            '../gallery/italy/Places-to-visit-in-italy.jpg',
-            '../gallery/italy/Best-places-to-visit-in-Italy.jpg.jpg',
-            '../gallery/italy/1573646518_italy.jpg.jpg',
-            '../gallery/italy/100g1900000174rpj2C5D.jpg',
-        ]
-    }
-]
 
 export const galleryIndia=[
     {

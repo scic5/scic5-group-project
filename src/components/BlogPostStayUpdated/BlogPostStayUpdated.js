@@ -53,7 +53,7 @@ const BlogPostStayUpdated = () => {
             <SwiperSlide>
                     <div class="maxWidthSm rounded overflow-hidden shadow-lg mb-10">
                         <div className='card-zoom'><img className="card-zoom-image w-full" src={blogPost.image} alt={blogPost.image}/></div>
-                        <div class="py-2 flex flex-row justify-between px-1">
+                        <div class="py-3 flex flex-row justify-between px-1">
                             <div class="font-bold text-gray-400 text-md mb-2">{blogPost.person}</div>
                             <div class="font-bold text-md mb-2">{`(${blogPost.comment.length})Comment`}</div>
                         </div>

@@ -12,7 +12,7 @@ return (
         {/* <h3 className='logo'><img className='w-16 h-16' src={icon} alt={icon} /></h3> */}
         <div className='flex flex-row items-center'>
             <img className='w-16 h-16 logo mr-3' src={icon} alt={icon} />
-            <p className='text-lg'>Travel Unlimit</p>
+            <p className='text-lg'>Travel Endless</p>
         </div>
         <ul className="nav-links" >
             <Link to="/"><li>Home</li></Link>

@@ -6,7 +6,7 @@ const Search = () => {
   const [startDate, setStartDate] = useState(new Date());
 
   return (
-    <div className="flex flex-row justify-evenly items-center tour-search absolute inset-x-0 -bottom-16 h-16 z-10 bg-gradient-to-r from-fuchsia-400 to-blue-500">
+    <div className="flex flex-row justify-evenly items-center tour-search absolute inset-x-0 -bottom-10 lg:-bottom-2 h-16 z-10 bg-gradient-to-r from-fuchsia-400 to-blue-500">
       <div><input placeholder='From' /></div>
       <div><input placeholder='To' /></div>
       <div className=''>
