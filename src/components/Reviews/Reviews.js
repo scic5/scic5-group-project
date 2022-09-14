@@ -1,11 +1,24 @@
-import React,{useRef} from 'react'
+import React,{useRef,useEffect,ref} from 'react'
 import '../../assets/reviews.css'
 import {reviews} from '../../assets/data'
 import {motion} from 'framer-motion'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import 'aos/dist/aos.cjs'
+import {useInView} from 'react-intersection-observer'
 const Reviews = () => {
   const scrollRef = useRef(null)
+  const {ref, inView} = useInView()
+
+  useEffect(()=>{
+    if(inView){
+      Aos.init({
+        duration:1200
+      })
+    }
+  },[inView])
   return (
-    <div className='pt-10 pb-16' style={{background:'#F9EAEA'}}>
+    <div ref={ref} data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in" data-aos-delay="150" className='pt-10 pb-16' style={{background:'#F9EAEA'}}>
         <p  className='pb-16 text-center text-2xl'>Reviews which we deserve</p>
         <motion.div 
         className= ' flex flex-col md:flex-row md:flex-row review gap-x-4 gap-y-4 drop-shadow-xl'
