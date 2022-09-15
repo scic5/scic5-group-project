@@ -20,25 +20,19 @@ const BestTourPkg = () => {
   return (
     <div className='pt-32'>
       <p className='text-center text-2xl pb-10'>Best Tour Packages, you love</p>
-      <div ref={ref} className='grid grid-cols-4 gap-4 px-10 tour-package'>
+      <div ref={ref} className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-10 tour-package'>
         {
             data.map((item)=>
-                <div data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in" data-aos-delay="150" key={item.id} class="max-w-sm rounded overflow-hidden shadow-lg">
+              <div data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in" data-aos-delay="150" key={item.id} class="m-auto max-w-sm rounded overflow-hidden shadow-lg">
                 <motion.div className='w-full'
-                  whileHover={{ 
-                    scale: 1.1,
-                    transition: { duration: 1.0 },
-                   }}
+                  whileHover={{ scale: 1.1,transition: { duration: 1.0 }, }}
                   whileTap={{ scale: 0.9  }}
-                  
                 >
-                  <img class="w-full" src={item.image} alt={item.image}/>
+                <img class="w-full" src={item.image} alt={item.image}/>
                 </motion.div>
-                <div class="px-3 pt-6 flex flex-row justify-between tour-price-day">
+                <div class="px-3 pt-6 flex flex-row justify-between items-center tour-price-day">
                     <p class="font-bold text-md">{item.price}</p>
-                    <p class="text-gray-700 text-md">
-                    {item.day}
-                    </p>
+                    <p class="text-gray-700 text-md">{item.day}</p>
                 </div>
                 <div class="px-3  pb-2 pt-1 tour-place flex flex-row items-center">
                     <svg xmlns="http://www.w3.org/2000/svg"

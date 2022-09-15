@@ -1,4 +1,4 @@
-import React ,{ref,useEffect} from 'react'
+import React ,{useEffect} from 'react'
 import '../../assets/whytravel.css'
 import {travel} from '../../assets/data.js'
 import {motion} from 'framer-motion'
@@ -20,7 +20,7 @@ const TravelWithUs = () => {
     if(!inView){
         animation.start({x:'-100vw'})
     }
-   },[inView])
+   },[inView,animation])
   return (
     <div 
       ref={ref}

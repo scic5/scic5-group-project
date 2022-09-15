@@ -1,4 +1,4 @@
-import React,{useRef,useEffect,ref} from 'react'
+import React,{useEffect} from 'react'
 import '../../assets/reviews.css'
 import {reviews} from '../../assets/data'
 import {motion} from 'framer-motion'
@@ -7,7 +7,7 @@ import 'aos/dist/aos.css'
 import 'aos/dist/aos.cjs'
 import {useInView} from 'react-intersection-observer'
 const Reviews = () => {
-  const scrollRef = useRef(null)
+
   const {ref, inView} = useInView()
 
   useEffect(()=>{
@@ -18,7 +18,7 @@ const Reviews = () => {
     }
   },[inView])
   return (
-    <div ref={ref} data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in" data-aos-delay="150" className='pt-10 pb-16' style={{background:'#F9EAEA'}}>
+    <div ref={ref}  className='pt-10 pb-16' style={{background:'#F9EAEA'}}>
         <p  className='pb-16 text-center text-2xl'>Reviews which we deserve</p>
         <motion.div 
         className= ' flex flex-col md:flex-row md:flex-row review gap-x-4 gap-y-4 drop-shadow-xl'
@@ -27,7 +27,7 @@ const Reviews = () => {
           transition={{delay:1.5,duration:1.5}}
         >
            {reviews.map((review)=>
-             <div key={review.id} class="max-w-sm rounded  shadow-lg rounded-t-full drop-shadow-xl " style={{boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'}}>
+             <div data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in" data-aos-delay="150" key={review.id} class="max-w-sm rounded  shadow-lg rounded-t-full drop-shadow-xl " style={{boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'}}>
               <img class=" rounded-full" src={review.image} alt={review.image}/>
               <div class="px-6 py-4">
                   <div class="font-bold text-md mb-2 text-center">{review.name}</div>

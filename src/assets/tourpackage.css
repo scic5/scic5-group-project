@@ -1,7 +1,7 @@
 @media (max-width:1214px){
     .tour-price-day{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding-top: 20px;
         font-size: 1.2vw;
     }
@@ -10,5 +10,47 @@
     }
     .tour-rating{
         font-size: 1.2vw;
+    }
+}
+@media (max-width:992px){
+    .tour-price-day{
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        font-size: 1.5vw;
+    }
+    .tour-place{
+        font-size: 1.5vw;
+    }
+    .tour-rating{
+        font-size: 1.5vw;
+    }
+}
+@media (max-width:768px){
+    .tour-price-day{
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        font-size: 1.7vw;
+    }
+    .tour-place{
+        font-size: 1.7vw;
+    }
+    .tour-rating{
+        font-size: 1.7vw;
+    }
+}
+@media (max-width:576px){
+    .tour-price-day{
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        font-size: 3vw;
+    }
+    .tour-place{
+        font-size: 3vw;
+    }
+    .tour-rating{
+        font-size: 3vw;
     }
 }

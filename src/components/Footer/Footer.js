@@ -15,7 +15,7 @@ import NewsLetter from '../NewsLetter/NewsLetter'
 const Footer = () => {
   return (
     <div className='relative pt-36 divide-y grid grid-cols-1'>
-      <div className=' flex flex-col lg:flex-row sm:flex-col md:flex-col px-10 gap-x-5 pt-32 text-white ' style={{backgroundColor:'#262339'}}>
+      <div className=' flex flex-col lg:flex-row sm:flex-col md:flex-col px-2 sm:px-10 md:px-10 gap-x-5 pt-32 text-white ' style={{backgroundColor:'#262339'}}>
         <div className='m-auto w-full lg:w-1/3'>
           <div className='pb-16  m-auto'>
             <div className='mb-5'><img className='w-16 h-16' src={icon} alt={icon}/></div>
@@ -32,42 +32,42 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='flex flex-row m-auto w-full lg:w-2/3'>
-          <div className='flex flex-col w-2/6'>
-            <p className=' mt-1 pb-6'>Contact Us</p>
-            <div className='flex flex-row items-center pb-3'>
-                <img className='w-6 h-6 mr-4' src={contact} alt={contact} />
+        <div className='flex flex-row gap-x-5 m-auto w-full lg:w-2/3'>
+          <div className='flex flex-col w-2/6 '>
+            <p className=' mt-1 pb-6 m-auto'>Contact Us</p>
+            <div className='flex flex-row items-center pb-3 '>
+                <img className='w-6 h-6 mr-4 hidden md:block lg:block' src={contact} alt={contact} />
                 <div className='flex flex-col'>
                     <p>+01852-1265122</p>
                     <p>+01852-1265122</p>
                 </div>
             </div>
             <div className='flex flex-row items-center pb-3'>
-                <img className='w-6 h-6 mr-4' src={letter} alt={letter} />
+                <img className='w-6 h-6 mr-4 hidden md:block lg:block' src={letter} alt={letter} />
                 <div className='flex flex-col'>
                     <p>info@example.com</p>
                     <p>support@gmail.com</p>
                 </div>
             </div>
             <div className='flex flex-row items-center pb-3'>
-                <img className='w-6 h-6 mr-4' src={location} alt={location} />
+                <img className='w-6 h-6 mr-4 hidden md:block lg:block' src={location} alt={location} />
                 <div className='flex flex-col'>
                     <p>2752 Willison Street</p>
                     <p>Eagan, United State</p>
                 </div>
             </div>
           </div>
-          <div className='w-2/6'>
-            <p className='mt-1 pb-6'>Support </p>
-            <p className='pb-3' >Contact us</p>
-            <p  className='pb-3'>About us</p>
-            <p  className='pb-3'>Destinations</p>
-            <p  className='pb-3'>Our Blogs</p>
-            <p  className='pb-3'>Package</p>
+          <div className='flex flex-col w-2/6 '>
+            <p className='mt-1 pb-6 m-auto'>Support </p>
+            <p className='pb-3 m-auto' >Contact us</p>
+            <p  className='pb-3 m-auto'>About us</p>
+            <p  className='pb-3 m-auto'>Destinations</p>
+            <p  className='pb-3 m-auto'>Our Blogs</p>
+            <p  className='pb-3 m-auto'>Package</p>
           </div>
-          <div className='w-2/6'>
-            <p className='mt-1 pb-6'>We Accepts</p>
-            <div className='flex flex-col'>
+          <div className='flex flex-col w-2/6'>
+            <p className='mt-1 pb-6 m-auto'>We Accepts</p>
+            <div className='flex flex-col m-auto'>
                 <div className='flex flex-row'>
                     <img className='w-16 h-16'  src={mastercard} alt={mastercard} />
                     <img className='w-16 h-16' src={visacard} alt={visacard} />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {Swiper,SwiperSlide} from 'swiper/react'
 //Import Swiper styles
 import "swiper/css";
@@ -10,10 +10,25 @@ import {galleryIndia,gallery,gallerySpain,galleryItaly} from '../../assets/data'
 import NorthIndia from '../../assets/gallery/india/7-places-in-North-India-you-must-visit-during-winter.jpg'
 import Italy from '../../assets/gallery/italy/7c278a27f058e5114483861a62be22a4.jpg'
 import spain from '../../assets/gallery/spain/0b00264378be12d76fbe36d627c14c4a--valencia-spain-beautiful-places.jpg'
-const Gallery = () => {
 
+// Aos animation 
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import 'aos/dist/aos.cjs'
+import {useInView} from 'react-intersection-observer'
+
+const Gallery = () => {
+    const {ref, inView} = useInView()
+
+    useEffect(()=>{
+      if(inView){
+        Aos.init({
+          duration:1200
+        })
+      }
+    },[inView])
   return (
-    <div className='flex flex-col px-8 gap-y-5'>
+    <div ref={ref} data-aos="zoom-in" data-aos-offset="200" data-aos-easing="ease-in" data-aos-delay="150" className='flex flex-col px-8 gap-y-5'>
         <p className='text-center text-gray-600  text-2xl pt-10 pb-10'>Gallery View</p>
        
             <div className='flex flex-row gap-x-4 gap-y-5'>
@@ -55,7 +70,7 @@ const Gallery = () => {
                     >
                         {galleryIndia.map((data)=>
                             <SwiperSlide>
-                                <div key={Math.floor(Math.random() * 100) + 1} class="max-w-sm rounded overflow-hidden shadow-lg m-auto">
+                                <div  key={Math.floor(Math.random() * 100) + 1} class="max-w-sm rounded overflow-hidden shadow-lg m-auto">
                                     <div className='h-48'>
                                         <img class="w-full h-full" src={data.image} alt={data.image}/>
                                     </div>
@@ -119,7 +134,7 @@ const Gallery = () => {
                     >
                         {galleryItaly.map((data)=>
                         <SwiperSlide>
-                            <div key={Math.floor(Math.random() * 100) + 1} class="max-w-sm rounded overflow-hidden shadow-lg m-auto">
+                            <div   key={Math.floor(Math.random() * 100) + 1} class="max-w-sm rounded overflow-hidden shadow-lg m-auto">
                                 <div className='h-48'>
                                     <img class="w-full h-full" src={data.image} alt={data.image}/>
                                 </div>
@@ -186,7 +201,7 @@ const Gallery = () => {
                 >
                     {gallerySpain.map((data)=>
                     <SwiperSlide>
-                        <div key={Math.floor(Math.random() * 100) + 1} class="max-w-sm rounded overflow-hidden shadow-lg m-auto">
+                        <div  key={Math.floor(Math.random() * 100) + 1} class="max-w-sm rounded overflow-hidden shadow-lg m-auto">
                             <div className='h-48'>
                                 <img class="w-full h-full" src={data.image} alt={data.image}/>
                             </div>
